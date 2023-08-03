@@ -94,6 +94,9 @@ function gameOver() {
 	gameSeq.splice(0, gameSeq.length);
 	started = false;
 	title.style.visibility = "visible";
+	for (const btn of buttons) {
+		btn.removeEventListener("click", buttonPress);
+	}
 }
 
 function flashScreen() {
